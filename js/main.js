@@ -48,20 +48,24 @@
 		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
 
 			event.preventDefault();
-
 			if ( $('#ftco-nav').is(':visible') ) {
 				$(this).removeClass('active');
 			} else {
 				$(this).addClass('active');	
-			}
-
-			
+			}			
 			
 		});
 
 	};
 	burgerMenu();
 
+	var collapse = function(){
+		$('body').on('click','.nav-link', function(event){
+			event.preventDefault();
+			$('.js-fh5co-nav-toggle').click();
+		});
+	};
+	collapse();
 
 	var onePageClick = function() {
 
